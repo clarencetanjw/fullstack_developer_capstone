@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
@@ -64,7 +63,7 @@ def registration(request):
         data = {"userName": username, "status": "Authenticated"}
     else:
         data = {"userName": username, "error": "Already Registered"}
-    
+
     return JsonResponse(data)
 
 
